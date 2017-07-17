@@ -66,6 +66,14 @@ footer{
 	font-weight: 500;
 }
 
+button{
+	text-transform: uppercase;
+	color: white;
+	background-color: #F15B31;
+	font-family: "Raleway", sans-serif;
+
+}
+
 .copyright{
 	font-family: "Raleway" ;
 	float: left;
@@ -92,4 +100,8 @@ footer{
 
 a:hover{
   border-color: white;
+}
+
+#alert {
+	color: #F15B31; 
 }

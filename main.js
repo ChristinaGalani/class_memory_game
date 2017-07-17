@@ -47,14 +47,17 @@ shuffle(cards);
 var cardsInPlay = [];
 
 var checkForMatch = function (){
+
 	if (cardsInPlay[0] === cardsInPlay[1]){
-		alert("You found a match!");
+		document.getElementById('alert').innerHTML= "<h3>You found a match!</h3>";
+		//alert("You found a match!");
 	}else {
-		alert("Sorry, try again...");		
+		document.getElementById('alert').innerHTML= "<h3>Sorry, try again...</h3>";
+		//alert("Sorry, try again...");		
 	}
-	location.reload();	
+	//location.reload();	
 	
-	console.log(cards);
+	//console.log(cards);
 };
 
 var flipCard = function (){
@@ -67,6 +70,8 @@ var flipCard = function (){
 	this.setAttribute('src', card.cardImage);
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
+    }else if(cardsInPlay.length >2 ){
+    	document.querySelector('img').removeEventListener('click', flipCard);
     }
 };
 
