@@ -53,6 +53,7 @@ var checkForMatch = function (){
 		//alert("You found a match!");
 	}else {
 		document.getElementById('alert').innerHTML= "<h3>Sorry, try again...</h3>";
+		document.querySelector('img').removeEventListener('click', flipCard);
 		//alert("Sorry, try again...");		
 	}
 	//location.reload();	
@@ -70,9 +71,10 @@ var flipCard = function (){
 	this.setAttribute('src', card.cardImage);
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
-    }else if(cardsInPlay.length >2 ){
-    	document.querySelector('img').removeEventListener('click', flipCard);
     }
+    // else if(cardsInPlay.length >2 ){
+    // 	document.querySelector('img').removeEventListener('click', flipCard);
+    // }
 };
 
 var createBoard = function (){
@@ -87,7 +89,7 @@ var createBoard = function (){
 
 createBoard();
 
-
+//document.getElementById("resetButton").onclick = "location.reload()";
 
 
 

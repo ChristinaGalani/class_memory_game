@@ -74,6 +74,9 @@ button{
 
 }
 
+#alert{
+	height: 20px;
+}
 .copyright{
 	font-family: "Raleway" ;
 	float: left;
